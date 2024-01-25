@@ -1,4 +1,4 @@
-1 - Clone project from given repo
+1 - Clone project from given repo and checkout in master branch
 2 - Composer install
 3 - ng serve to run dev server
 4 - testing credentials
