@@ -24,13 +24,7 @@ export class AuthServiceService {
   // }
 
   logout() {
-    const headers = new HttpHeaders({ 'Authorization': 'Bearer ' + localStorage.getItem('token') });
-    return this.http.post(`${this.apiUrl}/logout`, {}, { headers }).pipe(
-      tap(() => {
-        // Clear the token from localStorage upon successful logout
-        localStorage.removeItem('token');
-      })
-    );
+    localStorage.removeItem('token');
   }
 
 }

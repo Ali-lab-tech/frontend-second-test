@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
           console.log('sdasdsad');
           localStorage.setItem('token', response.token);
           // Redirect to the navbar or any desired route upon successful login
-          this.router.navigate(['/feedbacks']);
+          this.router.navigate(['/products']);
         } else {
           // Handle unsuccessful login
           console.error('Login failed:', response.message);

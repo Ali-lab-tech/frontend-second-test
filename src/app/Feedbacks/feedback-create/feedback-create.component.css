@@ -1,0 +1,6 @@
+/* Add this to your styles.css or component-specific styles */
+.custom-select {
+  -webkit-appearance: menulist; /* Chrome, Safari, Edge */
+  -moz-appearance: menulist;    /* Firefox */
+  appearance: menulist;
+}

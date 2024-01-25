@@ -1,0 +1,27 @@
+<!-- feedback-create.component.html -->
+<app-navbar></app-navbar>
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div *ngIf="alertType" class="alert alert-{{ alertType }}" role="alert">
+        {{ alertMessage }}
+      </div>
+      <!-- Add card and shadow classes to the form -->
+      <div class="card shadow">
+        <div class="card-body">
+          <form (submit)="submitProduct()">
+            <div class="mb-3">
+              <label for="title" class="form-label">Title</label>
+              <input type="text" name="title" [(ngModel)]="productData.name" class="form-control" id="title">
+            </div>
+            <div class="mb-3">
+              <label for="description" class="form-label">Description</label>
+              <textarea name="description" [(ngModel)]="productData.description" class="form-control" id="description"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Create</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

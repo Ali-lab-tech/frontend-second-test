@@ -16,9 +16,15 @@
               <textarea name="description" [(ngModel)]="feedbackData.description" class="form-control" id="description"></textarea>
             </div>
             <div class="mb-3">
-              <label for="category" class="form-label">Category</label>
-              <select name="category" [(ngModel)]="feedbackData.category" class="form-control" id="category">
-                <option disabled>Category</option>
+              <label for="category" class="form-label">Select Product</label>
+              <select name="category" [(ngModel)]="feedbackData.product_id" class="form-control custom-select">
+                <option *ngFor="let product of products" [value]="product.id">{{ product.name }}</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label for="category" class="form-label">Select Category</label>
+              <select name="category"  [(ngModel)]="feedbackData.category" class="form-control custom-select" id="category">
                 <option value="improvement">General</option>
                 <option value="bug report">Bug Report</option>
                 <option value="feature request">Feature Request</option>

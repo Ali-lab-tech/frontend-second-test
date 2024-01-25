@@ -17,6 +17,14 @@ export class FeedbackService {
     return this.http.get(`${this.apiUrl}/feedbacks`, { headers });
   }
 
+  getProducts(){
+    const headers = new HttpHeaders({
+      'Authorization': 'Bearer ' + localStorage.getItem('token')
+    });
+
+    return this.http.get(`${this.apiUrl}/products`, { headers });
+  }
+
   createFeedback(feedbackData: any){
     const headers = new HttpHeaders({
       'Authorization': 'Bearer ' + localStorage.getItem('token')

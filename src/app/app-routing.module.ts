@@ -6,6 +6,8 @@ import { NavbarComponent } from './Layouts/navbar/navbar.component';
 import { RegisterComponent } from './Api/register/register.component';
 import { FeedbackListingComponent } from './Feedbacks/feedback-listing/feedback-listing.component';
 import { FeedbackCreateComponent } from './Feedbacks/feedback-create/feedback-create.component';
+import { ProductListComponent } from './Products/product-list/product-list.component';
+import { ProductCreateComponent } from './Products/product-create/product-create.component';
 
 
 const routes: Routes = [
@@ -14,6 +16,8 @@ const routes: Routes = [
   { path: 'navbar', component: NavbarComponent },
   { path: 'feedbacks', component: FeedbackListingComponent },
   { path: 'feedbacks/create', component: FeedbackCreateComponent },
+  { path: 'products', component: ProductListComponent },
+  { path: 'products/create', component: ProductCreateComponent },
   { path: '**', redirectTo: 'login', pathMatch: 'full' },
   { path: '', component: LoginComponent },
 ];

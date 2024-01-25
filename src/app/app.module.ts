@@ -10,6 +10,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { FeedbackListingComponent } from './Feedbacks/feedback-listing/feedback-listing.component';
 import { FeedbackCreateComponent } from './Feedbacks/feedback-create/feedback-create.component';
+import { ProductListComponent } from './Products/product-list/product-list.component';
+import { ProductCreateComponent } from './Products/product-create/product-create.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +19,9 @@ import { FeedbackCreateComponent } from './Feedbacks/feedback-create/feedback-cr
     RegisterComponent,
     NavbarComponent,
     FeedbackListingComponent,
-    FeedbackCreateComponent
+    FeedbackCreateComponent,
+    ProductListComponent,
+    ProductCreateComponent
   ],
   imports: [
     BrowserModule,
